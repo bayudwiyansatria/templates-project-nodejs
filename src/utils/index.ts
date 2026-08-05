@@ -10,8 +10,8 @@
  * These are **not** part of the published API. `src/index.ts` deliberately does
  * not re-export this barrel; a fork that wants its helpers to be API adds one
  * line there, which is a decision worth making explicitly rather than
- * inheriting. Compare `nodejs-auth-client`, which does publish its `utils/`
- * because `parseJwt` and `cleanupAuthUrl` are genuinely part of its surface.
+ * inheriting. Plenty of libraries do publish their helpers — the point is that
+ * doing so should be a choice, not the default you were handed.
  *
  * @example
  * ```ts

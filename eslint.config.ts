@@ -73,10 +73,9 @@ export default tseslint.config(
       '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       /*
-       * Kept stricter than the sibling repositories, which switch this off
-       * entirely. An unused import in a library is dead weight that ships in the
-       * bundle; `^_` is the escape hatch for a parameter that exists only to
-       * hold a position in a signature.
+       * An error rather than a warning: an unused import in a library is dead
+       * weight that ships in the bundle. `^_` is the escape hatch for a
+       * parameter that exists only to hold a position in a signature.
        */
       '@typescript-eslint/no-unused-vars': [
         'error',

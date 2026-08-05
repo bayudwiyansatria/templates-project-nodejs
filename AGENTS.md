@@ -6,8 +6,8 @@ A reusable Node.js library template. It provides the working structure, build, t
 for a publishable TypeScript library, and is intended to be forked and adapted. The public API is exported from a single
 barrel, `src/index.ts`; everything else is internal.
 
-Two sibling repositories are useful context: `cloudflare-boilerplate` (the source of most of this structure) and
-`nodejs-auth-client` (a published library grown from this template).
+Because it is a template, a defect here is not one bug — it is one bug in every library forked from it. Treat the
+tooling as production code.
 
 ## Module Structure
 
@@ -95,8 +95,7 @@ npm run docker:serve:docs # serve the site at http://localhost/
 
 **ESLint 10 flat config** (`eslint.config.ts` — `.eslintrc.json` is gone; ESLint 10 cannot read it):
 
-- `@typescript-eslint/no-unused-vars` is an **error**, with `^_` as the escape. Stricter than the sibling repositories
-  on purpose: an unused import in a library ships.
+- `@typescript-eslint/no-unused-vars` is an **error**, with `^_` as the escape. An unused import in a library ships.
 - `curly` is an error; `multiline-comment-style` warns.
 - The leaf-layer `no-restricted-imports` boundary described above.
 - `*.spec.ts` files are excluded from linting.

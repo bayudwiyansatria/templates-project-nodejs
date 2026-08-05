@@ -9,10 +9,8 @@ See detailed changes in [docs/changes-log/](docs/changes-log/) for each work ses
 
 ## [1.1.0] - 2026-08-05
 
-Adopts the working structure and documentation system from
-[`cloudflare-boilerplate`](https://github.com/bayudwiyansatria/cloudflare-boilerplate), shaped by what
-[`nodejs-auth-client`](https://github.com/bayudwiyansatria/nodejs-auth-client) — a library grown from this template —
-turned out to need.
+Gives the template a working structure and a documentation system, and repairs the tooling that was supposed to keep
+both honest.
 
 ### Breaking Changes
 
@@ -31,7 +29,7 @@ turned out to need.
 ### Added
 
 - **A layered `src/`** — `core/` (domain), `types/`, `constants/`, `exceptions/`, `utils/`, each with an
-  `@module`-documented barrel, generalized from the layout `nodejs-auth-client` converged on
+  `@module`-documented barrel stating what belongs in the layer and what may import it
 - **`LibraryException`** — a base exception carrying a stable `code` and an optional `cause`, so consumers can catch and
   branch without matching on message text. `cause` is declared on the class rather than taken from `ErrorOptions`, which
   is ES2022, keeping the ES2020 baseline intact
@@ -69,7 +67,8 @@ turned out to need.
 - **`lint:run` linted nothing.** `eslint -c .eslintrc.json --ext=.ts,tsx` was missing a path argument
 - **`npm test` hid lint failures.** `npm run lint & npm run test:run` backgrounds the linter on POSIX shells; it is now
   `&&`
-- **`dev` referenced Miniflare**, which is not a dependency and has no meaning in a library. It is now Rollup watch mode
+- **`dev` referenced a runtime CLI** that was never a dependency and has no meaning in a library. It is now Rollup watch
+  mode
 
 ### Removed
 

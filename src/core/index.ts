@@ -3,8 +3,8 @@
  *
  * @remarks
  * **Rename this directory when you fork.** `core` is a placeholder; the name
- * should say what the library is about, the way `nodejs-auth-client` calls its
- * equivalent `client/`. Everything else in `src/` is supporting cast:
+ * should say what the library is about — `client/`, `parser/`, `store/`.
+ * Everything else in `src/` is supporting cast:
  *
  * | Layer            | Holds                                        | May import               |
  * | ---------------- | -------------------------------------------- | ------------------------ |

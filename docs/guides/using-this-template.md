@@ -62,8 +62,9 @@ consumers can catch. Keep every `index.ts` barrel; they are the structure.
 Two things worth verifying explicitly, because both have silently ridden along into forks of this template before:
 
 - **`tsconfig.json#types`** — it lists only `@types/jest` and `@types/node`. If you add an ambient types package, make
-  sure it is one your library actually needs. `@bayudwiyansatria/auth-client`, a browser library, carried
-  `@cloudflare/workers-types` for three releases because it was in the template at the time it was forked.
+  sure it is one your library actually needs. A runtime-specific types package inherited at fork time is easy to miss:
+  nothing fails, the globals it declares simply become available, and code starts depending on a runtime the library
+  does not target.
 - **`devDependencies`** — remove anything your build does not use. An unused lint plugin costs an install, an audit
   finding, and a version bump forever.
 
