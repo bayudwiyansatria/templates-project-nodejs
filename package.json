@@ -64,8 +64,7 @@
     "lint:run": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "npm run lint && npm run test:run",
-    "test:run": "jest --config jest.config.json",
-    "release": "echo Ready for release"
+    "test:run": "jest --config jest.config.json"
   },
   "config": {},
   "dependencies": {},
