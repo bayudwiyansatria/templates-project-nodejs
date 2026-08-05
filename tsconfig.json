@@ -10,7 +10,11 @@
     ],
     /* Modules */
     "rootDir": "./",
-    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "module": "ES2020",
     "types": [
       "@types/jest",
