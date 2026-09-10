@@ -1,5 +1,7 @@
 # Templates Project Node.js
 
+[![Main](https://github.com/bayudwiyansatria/templates-project-nodejs/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/bayudwiyansatria/templates-project-nodejs/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/bayudwiyansatria/templates-project-nodejs/graph/badge.svg)](https://codecov.io/gh/bayudwiyansatria/templates-project-nodejs)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 [![License](https://img.shields.io/github/license/bayudwiyansatria/templates-project-nodejs)](LICENSE)
 [![Version](https://img.shields.io/github/package-json/v/bayudwiyansatria/templates-project-nodejs)](package.json)
